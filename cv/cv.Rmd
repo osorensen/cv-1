@@ -28,6 +28,9 @@ jobs <- read_delim(here::here("data", "jobs.csv"), delim = ";")
 ## Editorial boards
 editor <- read_delim(here::here("data", "editor.csv"), delim = ";")
 
+## Grants
+grants <- read_delim(here::here("data", "grants.csv"), delim = ";")
+
 ## Papers
 get_papers <- function(bibfile){
   bib2df::bib2df(here::here("data", bibfile)) %>% 
@@ -56,21 +59,29 @@ get_papers <- function(bibfile){
 pubs <- get_papers("publications.bib")
 preprints <- get_papers("preprints.bib")
 
+## Software
+software <- read_delim(here::here("data", "software.csv"), delim = ";") %>% 
+  arrange(desc(when))
 
 ## Teaching
 teaching <- read_delim(here::here("data", "teaching.csv"), delim = ";") %>% 
   arrange(desc(when))
 
-## Presentations
-presentations <- read_csv(here::here("data", "presentations.csv")) %>% 
+## Courses and workshop
+courses <- read_delim(here::here("data", "courses.csv"), delim = ";") %>% 
   arrange(desc(when))
 
-## Training
-training <- read_csv(here::here("data", "training.csv")) %>% 
-  arrange(desc(end))
+
+## Presentations
+presentations <- read_delim(here::here("data", "presentations.csv"), delim = ";") %>% 
+  arrange(desc(when))
+
+## Other presentations
+communication <- read_delim(here::here("data", "communication.csv"), delim = ";") %>% 
+  arrange(desc(when))
 
 ## Service
-service <- read_csv(here::here("data", "service.csv"))
+service <- read_delim(here::here("data", "service.csv"), delim = ";")
 ```
 
 # Education
@@ -107,10 +118,27 @@ editor %>%
   )
 ```
 
+# Grants
+
+```{r}
+grants %>% 
+  detailed_entries(
+    what = project,
+    with = role,
+    when = glue("{start_date}--{end_date}"),
+    why = details
+  )
+```
 
 
+# Publications
 
-# First Author Publications
+*See [my Google Scholar profile](https://scholar.google.com/citations?user=neOqbw0AAAAJ&hl=no) for further information.*
+\hfill\break
+
+## First Author Publications
+
+
 
 ```{r}
 pubs %>% 
@@ -124,7 +152,7 @@ pubs %>%
   )
 ```
 
-# Non First Author Publications
+## Non First Author Publications
 
 ```{r}
 pubs %>% 
@@ -139,7 +167,7 @@ pubs %>%
 ```
 
 
-# Preprints
+## Preprints
 
 ```{r}
 preprints %>%
@@ -156,72 +184,62 @@ preprints %>%
 
 # Software
 
-```{r}
-df <- tribble(~what, ~when, ~with, ~where, ~why,
-              "hdme: High-Dimensional Regression with Measurement Error",
-              2018,
-              "Sørensen Ø",
-              "https://cran.r-project.org/package=hdme",
-              "Author and maintainer",
-              
-              "BayesMallows: Bayesian Preference Learning with the Mallows Rank Model",
-              2018,
-              "Sørensen Ø et al.",
-              "https://cran.r-project.org/package=BayesMallows",
-              "Author and maintainer",
-              
-              "metagam: Meta-Analysis of Generalized Additive Models",
-              2020,
-              "Sørensen Ø., Brandmaier AM, and Mowinckel AM",
-              "https://cran.r-project.org/package=metagam",
-              "Author and maintainer",
-              
-              "BayesianLaterality: Predict Brain Asymmetry Based on Handedness and Dichotic Listening",
-              2020,
-              "Sørensen Ø.",
-              "https://cran.r-project.org/package=BayesianLaterality",
-              "Author and maintainer",
-              
-              "cellmigRation: Track Cells, Analyze Cell Trajectories and Compute Migration Statistics",
-              2021,
-              "Ghannoum S, Fantini D, Leoncio W, and Sørensen Ø",
-              "https://bioconductor.org/packages/cellmigRation/",
-              "Contributor"
-              )
-```
+*See [my GitHub](https://github.com/osorensen/) for a complete overview of my software both released and in development.*
+\hfill\break
 
 
 ```{r}
-df %>% 
-  arrange(desc(when)) %>% 
+software %>% 
   detailed_entries(what = what, when = when, with = with, where = where, why = why)
 ```
 
 
-*See [my GitHub](https://github.com/osorensen/) for a complete overview of my software both released and in development.*
 
-<!-- # Teaching -->
 
-<!-- ```{r} -->
-<!-- teaching %>%  -->
-<!--   detailed_entries(what = what, when = when, with = with, why = details) -->
-<!-- ``` -->
+# Teaching
 
-<!-- # Presentations -->
+```{r}
+teaching %>%
+  detailed_entries(what = what, when = when, with = with, why = details, where = where)
+```
 
-<!-- ```{r} -->
-<!-- presentations %>%  -->
-<!--   detailed_entries(what = what, -->
-<!--                    when = when, -->
-<!--                    with = with, -->
-<!--                    where = where, -->
-<!--                    why = why, -->
-<!--                    .protect = TRUE) -->
-<!-- ``` -->
 
-<!-- # Service -->
+# Courses and Workshops Organized
 
-<!-- ```{r} -->
-<!-- service %>%  -->
-<!--   detailed_entries(with = type, why = details) -->
-<!-- ``` -->
+```{r}
+courses %>%
+  detailed_entries(what = what, when = when, with = with, why = details, where = where)
+```
+
+
+# Presentations at Peer-Reviewed International Conferences
+
+```{r}
+presentations %>%
+  detailed_entries(what = what,
+                   when = when,
+                   with = with,
+                   where = where,
+                   why = why,
+                   .protect = TRUE)
+```
+
+
+# Research Communication and Other Presentations
+
+```{r}
+communication %>%
+  detailed_entries(what = what,
+                   when = when,
+                   with = with,
+                   where = where,
+                   why = why,
+                   .protect = TRUE)
+```
+
+# Service
+
+```{r}
+service %>%
+  detailed_entries(what = type, why = details)
+```

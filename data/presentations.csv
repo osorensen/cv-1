@@ -1,10 +1,11 @@
-what,when,with,where,why, type, loc, invited
-"Assessing the Evidence for Universal Bacillus Calmette-Guèrin (BCG) Vaccination in England", "2016", "Research and Applied Epidemiology Scientific Conference", "Warwick", "Received best abstract from an early career researcher.", talk, national, no
-"Assessing the Evidence for Universal Bacillus Calmette-Guèrin (BCG) Vaccination in England", "2016", "Research and Applied Epidemiology Scientific Conference", "Warwick", "Slides: samabbott.co.uk/talk/phe-applied_epi-2016/", talk, national, no
-"Beneficial effects of BCG vaccination in outcomes for patients with active TB: observational study using the Enhanced Tuberculosis surveillance system 2000-2014", "2017", "Research and Applied Epidemiology Scientific Conference", "Warwick", "Received best PhD student abstract.", talk, national, no
-"Beneficial effects of BCG vaccination in outcomes for patients with active TB: observational study using the Enhanced Tuberculosis surveillance system 2000-2014", "2017", "Research and Applied Epidemiology Scientific Conference", "Warwick", "Slides: samabbott.co.uk/talk/phe-applied-epi-2017/", talk, national, no
-"Beneficial effects of BCG vaccination in outcomes for patients diagnosed with TB: observational study using the Enhanced Tuberculosis surveillance system 2009-2015", "2017", "48th Union World Conference on Lung Health", "Mexico", "Slides: samabbott.co.uk/talk/union-2017/", talk, international, no
-"Estimating the effect of the 2005 UK BCG vaccination policy change: A retrospective cohort study using the Enhanced Tuberculosis Surveillance system, 2000-2015", "2018", "Research and Applied Epidemiology Scientific Conference", "Warwick", "Slides: samabbott.co.uk/talk/phe-applied-epi-2018/", talk, national, no
-"(My) essential R resources", 2019, "BristolR", Bristol, "Slides: samabbott.co.uk/talk/myessentialr-bristolr_19_04_20/", talk, national, yes
-"What do we really know about BCG?", 2019, "UK Clinical Vaccine Network Conference", "Oxford", "Slides:  samabbott.co.uk/talk/uk-vac-network-2019/", talk, national, no
-"getTBinR: an R package for accessing and summarising World Health Organization Tuberculosis data", 2019, "R/Medicine", "Boston", "Slides:  samabbott.co.uk/talk/gettbinr-14-09-19/", talk, international, no
+what;when;with;where;why;type
+"Generalized additive latent and mixed models";"2021";"NORDSTAT2021";"Tromsø, Norway (Online)";Slides: https://osorensen.github.io/NORDSTAT2021/presentation.html;"contributed talk"
+"Longitudinal modeling of age-dependent latent traits with generalized additive latent and mixed models";"2021";"Nordic-Baltic Biometrics Conference";"Helsinki, Finland (Online)";Slides: https://osorensen.github.io/NordicBalticBiometrics2021/presentation.html;"contributed talk"
+"Flexible Meta-Analysis of Generalized Additive Models with metagam";"2020";"European R User Meeting";"Milan, Italy (Online)";Slides: https://osorensen.github.io/ERUM2020/metagam/metagam.html;"regular talk"
+"Analyzing Preference Data with the BayesMallows Package";"2020";"European R User Meeting";"Milan, Italy (Online)";Slides: https://osorensen.github.io/ERUM2020/BayesMallows/presentation.html;"lightning talk"
+"On Computing Age Trajectories of Brain Volumes Using Additive Mixed Models";"2019";"Organization for Human Brain Mapping Annual Meeting";"Rome, Italy";Poster presentation.;"poster"
+"Bayesian inference for the Mallows rank model";"2014";"NORDSTAT2014";"Turku, Finland";Contributed talk.;"talk"
+"Generalized Matrix Uncertainty Selector";"2013";"Workshop on Statistical Methods for Post-Genomic Data";"Amsterdam, Netherlands";Contributed talk.;"talk"
+"Variable Selection by Lasso in Regression with Measurement Error";"2012";"Annual conference of the International Society for Clinical Biostatistics";"Bergen, Norway";Contributed talk.;"talk"
+"Variable Selection by Lasso in Regression with Measurement Error";"2012";"World Congress of Probability and Statistics";"Istanbul, Turkey";Contributed talk.;"talk"
+"Impact of Measurement Error in Lasso";"2012";"NSF Workshop for High-Dimensional Data";"Yale University, New Haven, United States";Poster presentation.;"talk"
